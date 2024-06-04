@@ -1,0 +1,62 @@
+<div
+  class="p-5 w-[300px] md:w-[500px] mt-10 flex flex-col items-center justify-center gap-3 bg-white shadow-lg rounded-lg"
+>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" class="flex flex-col gap-3">
+    <select class="select input-md" formControlName="code">
+      <option value="" disbaled selected>Currency</option>
+      <option value="USD">USD</option>
+      <option value="EUR">EUR</option>
+      <option value="THB">THB</option>
+      <option value="AUD">AUD</option>
+      <option value="HKD">HKD</option>
+      <option value="CAD">CAD</option>
+      <option value="NZD">NZD</option>
+      <option value="SGD">SGD</option>
+      <option value="HUF">HUF</option>
+      <option value="CHF">CHF</option>
+      <option value="GBP">GBP</option>
+      <option value="UAH">UAH</option>
+      <option value="JPY">JPY</option>
+      <option value="CZK">CZK</option>
+      <option value="DKK">DKK</option>
+      <option value="ISK">ISK</option>
+      <option value="NOK">NOK</option>
+      <option value="SEK">SEK</option>
+      <option value="RON">RON</option>
+      <option value="BGN">BGN</option>
+      <option value="TRY">TRY</option>
+      <option value="ILS">ILS</option>
+      <option value="CLP">CLP</option>
+      <option value="PHP">PHP</option>
+      <option value="MXN">MXN</option>
+      <option value="ZAR">ZAR</option>
+      <option value="BRL">BRL</option>
+      <option value="MYR">MYR</option>
+      <option value="IDR">IDR</option>
+      <option value="INR">INR</option>
+      <option value="KRW">KRW</option>
+      <option value="CNY">CNY</option>
+      <option value="XDR">XDR</option>
+    </select>
+    <label
+      class="input input-bordered input-lg flex items-center justify-center gap-2 w-[200px]"
+    >
+      <i class="fa-solid fa-user"></i>
+      <input
+        type="text"
+        placeholder="Full Name"
+        class="w-5/6 focus:outline-none"
+        formControlName="fullName"
+      />
+    </label>
+    <button class="btn btn-primary">Send</button>
+  </form>
+</div>
+<div
+  class="p-5 w-[300px] md:w-[500px] h-[200px] mt-10 flex flex-col items-center justify-center gap-3 bg-white shadow-lg rounded-lg"
+>
+  <app-loader [display]="loading"></app-loader>
+  <div *ngIf="!loading">
+    <app-result-view [value]="response.value" [code]="code"></app-result-view>
+  </div>
+</div>

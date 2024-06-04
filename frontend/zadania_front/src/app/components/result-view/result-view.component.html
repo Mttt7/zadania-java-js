@@ -1,0 +1,15 @@
+<div *ngIf="value > 0 && code != ''" class="fade-in">
+  <div class="text-4xl">
+    1{{ code }} =
+
+    <span class="text-primary">{{ value }}PLN</span>
+  </div>
+</div>
+
+<div *ngIf="code == ''" class="flex items-center justify-center">
+  <div class="text-center font-semibold w-5/6">
+    Choose currency and provide your Full Name to make your
+
+    <span class="text-primary">first request! 😎</span>
+  </div>
+</div>
