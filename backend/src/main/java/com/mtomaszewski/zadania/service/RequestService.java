@@ -7,8 +7,5 @@ import java.util.List;
 
 public interface RequestService {
     void saveRequestToDb(CurrencyRequestDto currencyRequest, Double rate);
-
-
     List<RequestResponseDto> getAllRequests();
-
 }

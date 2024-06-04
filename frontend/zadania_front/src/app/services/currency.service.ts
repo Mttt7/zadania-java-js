@@ -9,11 +9,11 @@ import { HistoryResponse } from '../models/historyResponse';
   providedIn: 'root',
 })
 export class CurrencyService {
-  apiUrl = 'http://localhost:8080/currencies';
+  public apiUrl: string = 'http://localhost:8080/currencies';
 
   constructor(private httpClient: HttpClient) {}
 
-  getCurrencyValue(
+  public getCurrencyValue(
     request: CurrencyValueRequest
   ): Observable<CurrencyValueResponse> {
     return this.httpClient.post<CurrencyValueResponse>(
@@ -22,7 +22,7 @@ export class CurrencyService {
     );
   }
 
-  getHistory(): Observable<HistoryResponse> {
+  public getHistory(): Observable<HistoryResponse> {
     return this.httpClient.get<HistoryResponse>(this.apiUrl + '/requests');
   }
 }

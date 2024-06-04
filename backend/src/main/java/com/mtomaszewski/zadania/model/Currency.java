@@ -1,6 +1,5 @@
 package com.mtomaszewski.zadania.model;
 
-
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -16,6 +15,4 @@ public class Currency {
 
     @Column(name = "name",nullable = false,unique = true)
     private String code;
-
-
 }

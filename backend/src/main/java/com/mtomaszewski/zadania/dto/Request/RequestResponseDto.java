@@ -13,5 +13,4 @@ public class RequestResponseDto {
     private String name;
     private Date date;
     private Double value;
-
 }

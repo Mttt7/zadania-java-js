@@ -4,7 +4,6 @@ import com.mtomaszewski.zadania.client.NbpCurrencyClientApi;
 import com.mtomaszewski.zadania.dto.Currency.CurrencyRequestDto;
 import com.mtomaszewski.zadania.dto.Currency.CurrencyResponseDto;
 import com.mtomaszewski.zadania.mapper.CurrencyMapper;
-import com.mtomaszewski.zadania.model.Currency;
 import com.mtomaszewski.zadania.service.CurrencyRateService;
 import com.mtomaszewski.zadania.service.RequestService;
 import lombok.RequiredArgsConstructor;
@@ -23,6 +22,4 @@ public class CurrencyRateServiceImpl implements CurrencyRateService {
 
         return CurrencyMapper.mapToCurrencyResponseDto(rate);
     }
-
-
 }

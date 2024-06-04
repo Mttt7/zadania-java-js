@@ -1,6 +1,5 @@
 package com.mtomaszewski.zadania.mapper;
 
-
 import com.mtomaszewski.zadania.dto.Currency.CurrencyResponseDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -15,6 +14,4 @@ public class CurrencyMapper {
                 .value(rate)
                 .build();
     }
-
-
 }

@@ -1,8 +1,6 @@
 package com.mtomaszewski.zadania.model;
 
-
 import jakarta.persistence.*;
-import lombok.Builder;
 import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
 

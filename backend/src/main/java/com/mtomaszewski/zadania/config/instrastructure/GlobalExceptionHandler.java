@@ -1,4 +1,4 @@
-package com.mtomaszewski.zadania.config.security;
+package com.mtomaszewski.zadania.config.instrastructure;
 
 
 import com.mtomaszewski.zadania.exception.CurrencyNotFound;

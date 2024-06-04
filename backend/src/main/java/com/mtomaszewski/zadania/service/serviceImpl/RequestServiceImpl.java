@@ -7,7 +7,6 @@ import com.mtomaszewski.zadania.model.Currency;
 import com.mtomaszewski.zadania.model.Request;
 import com.mtomaszewski.zadania.model.User;
 import com.mtomaszewski.zadania.repository.RequestRepository;
-import com.mtomaszewski.zadania.service.CurrencyRateService;
 import com.mtomaszewski.zadania.service.CurrencyService;
 import com.mtomaszewski.zadania.service.RequestService;
 import com.mtomaszewski.zadania.service.UserService;
@@ -43,8 +42,5 @@ public class RequestServiceImpl implements RequestService {
         List<Request> requests = requestRepository.findAll();
 
         return requests.stream().map(RequestMapper::mapToRequestResponseDto).collect(Collectors.toList());
-
     }
-
-
 }

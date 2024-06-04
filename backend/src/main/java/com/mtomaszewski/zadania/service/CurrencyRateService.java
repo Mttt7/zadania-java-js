@@ -6,6 +6,4 @@ import com.mtomaszewski.zadania.model.Currency;
 
 public interface CurrencyRateService {
     CurrencyResponseDto getCurrentValueCommand(CurrencyRequestDto currencyRequest);
-
-
 }

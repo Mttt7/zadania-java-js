@@ -24,5 +24,4 @@ public class UserServiceImpl implements UserService {
         user.setName(name);
         return userRepository.save(user);
     }
-
 }

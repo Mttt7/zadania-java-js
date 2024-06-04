@@ -5,12 +5,13 @@
   >
     <a
       class="btn btn-ghost pl-0 md:pl-1 text-2xl flex items-center justify-center"
+      [routerLink]="'/home'"
       >Currency Converter
       <i class="fa-solid fa-dollar-sign text-primary"></i>
     </a>
     <div class="flex items-center justify-center gap-5 md:gap-3">
-      <a [routerLink]="'/home'"> Converter </a>
-      <a [routerLink]="'/history'"> History </a>
+      <a [routerLink]="'/home'" class="hover:text-primary"> Converter </a>
+      <a [routerLink]="'/history'" class="hover:text-primary"> History </a>
     </div>
   </div>
   <label class="swap swap-rotate">
@@ -37,6 +38,6 @@
   </label>
 </div>
 
-<div class="w-full h-full flex flex-col items-center justify-center">
+<div class="w-full h-full flex flex-col items-center justify-center pb-5">
   <router-outlet></router-outlet>
 </div>

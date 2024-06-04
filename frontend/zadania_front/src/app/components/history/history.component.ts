@@ -8,8 +8,8 @@ import { HistoryResponse } from '../../models/historyResponse';
   styleUrl: './history.component.css',
 })
 export class HistoryComponent implements OnInit {
-  history: HistoryResponse = [];
-  loading: boolean = false;
+  public history: HistoryResponse = [];
+  public loading: boolean = false;
 
   constructor(private currencyService: CurrencyService) {}
 

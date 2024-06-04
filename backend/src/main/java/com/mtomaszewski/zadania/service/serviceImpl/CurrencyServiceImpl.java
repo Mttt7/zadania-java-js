@@ -2,7 +2,6 @@ package com.mtomaszewski.zadania.service.serviceImpl;
 
 
 import com.mtomaszewski.zadania.model.Currency;
-import com.mtomaszewski.zadania.model.User;
 import com.mtomaszewski.zadania.repository.CurrencyRepository;
 import com.mtomaszewski.zadania.service.CurrencyService;
 import lombok.RequiredArgsConstructor;
@@ -20,7 +19,6 @@ public class CurrencyServiceImpl implements CurrencyService {
                 ()->createNewCurrency(code)
         );
     }
-
 
     private Currency createNewCurrency(String code) {
         Currency currency = new Currency();

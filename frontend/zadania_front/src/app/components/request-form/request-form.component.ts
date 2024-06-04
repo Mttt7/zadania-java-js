@@ -11,33 +11,70 @@ import { toast } from 'ngx-sonner';
   styleUrl: './request-form.component.css',
 })
 export class RequestFormComponent implements OnInit {
-  loading: boolean = false;
+  public loading: boolean = false;
+  public response: CurrencyValueResponse = {} as CurrencyValueResponse;
+  public code: string = '';
+  public form: FormGroup;
 
-  response: CurrencyValueResponse = {} as CurrencyValueResponse;
-
-  code: string = '';
+  public currencies: string[] = [
+    'USD',
+    'EUR',
+    'THB',
+    'AUD',
+    'HKD',
+    'CAD',
+    'NZD',
+    'SGD',
+    'HUF',
+    'CHF',
+    'GBP',
+    'UAH',
+    'JPY',
+    'CZK',
+    'DKK',
+    'ISK',
+    'NOK',
+    'SEK',
+    'RON',
+    'BGN',
+    'TRY',
+    'ILS',
+    'CLP',
+    'PHP',
+    'MXN',
+    'ZAR',
+    'BRL',
+    'MYR',
+    'IDR',
+    'INR',
+    'KRW',
+    'CNY',
+    'XDR',
+  ];
 
   constructor(private currencyService: CurrencyService) {}
 
   ngOnInit(): void {
-    //throw new Error('Method not implemented.');
+    this.initFort();
   }
 
-  form: FormGroup = new FormGroup({
-    code: new FormControl('', [
-      Validators.required,
-      Validators.minLength(3),
-      Validators.maxLength(3),
-    ]),
-    fullName: new FormControl('', [
-      Validators.required,
-      Validators.minLength(3),
-      Validators.maxLength(50),
-      Validators.pattern('^[A-Z][a-z]+ [A-Z][a-z]+$'),
-    ]),
-  });
+  private initFort(): void {
+    this.form = new FormGroup({
+      code: new FormControl('', [
+        Validators.required,
+        Validators.minLength(3),
+        Validators.maxLength(3),
+      ]),
+      fullName: new FormControl('', [
+        Validators.required,
+        Validators.minLength(3),
+        Validators.maxLength(50),
+        Validators.pattern('^[A-Z][a-z]+ [A-Z][a-z]+$'),
+      ]),
+    });
+  }
 
-  onSubmit() {
+  public onSubmit(): void {
     if (this.form.invalid) {
       if (this.form.controls['code'].invalid) {
         toast.error('Code invalid');
