@@ -5,9 +5,6 @@
     "outDir": "./out-tsc/app",
     "types": []
   },
-  "paths":{
-    "tslib": ["node_modules/tslib/tslib.d.ts"]
-  },
   "files": [
     "src/main.ts"
   ],
