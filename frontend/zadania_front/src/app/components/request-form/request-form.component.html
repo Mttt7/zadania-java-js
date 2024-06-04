@@ -1,5 +1,5 @@
 <div
-  class="p-5 w-[300px] md:w-[500px] mt-10 flex flex-col items-center justify-center gap-3 bg-white shadow-lg rounded-lg"
+  class="p-5 w-[300px] md:w-[500px] mt-10 flex flex-col items-center justify-center gap-3 bg-table-bg shadow-lg rounded-lg"
 >
   <form [formGroup]="form" (ngSubmit)="onSubmit()" class="flex flex-col gap-3">
     <select class="select input-md" formControlName="code">
@@ -53,7 +53,7 @@
   </form>
 </div>
 <div
-  class="p-5 w-[300px] md:w-[500px] h-[200px] mt-10 flex flex-col items-center justify-center gap-3 bg-white shadow-lg rounded-lg"
+  class="p-5 w-[300px] md:w-[500px] h-[200px] mt-10 flex flex-col items-center justify-center gap-3 bg-table-bg shadow-lg rounded-lg"
 >
   <app-loader [display]="loading"></app-loader>
   <div *ngIf="!loading">

@@ -40,7 +40,6 @@ export class RequestFormComponent implements OnInit {
   onSubmit() {
     if (this.form.invalid) {
       if (this.form.controls['code'].invalid) {
-        //toast error in english:
         toast.error('Code invalid');
       } else if (this.form.controls['fullName'].invalid) {
         toast.error('Full name has to be in format: Name Surname');

@@ -16,7 +16,6 @@ export class HistoryComponent implements OnInit {
   ngOnInit(): void {
     this.loading = true;
     this.currencyService.getHistory().subscribe((data) => {
-      console.log(data);
       this.history = data;
       this.loading = false;
     });
