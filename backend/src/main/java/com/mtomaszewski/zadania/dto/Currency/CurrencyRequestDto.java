@@ -3,9 +3,12 @@ package com.mtomaszewski.zadania.dto.Currency;
 
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.RequiredArgsConstructor;
 
 @Data
+@AllArgsConstructor
 public class CurrencyRequestDto {
 
     @Pattern(regexp = "^[A-Z]{3}$", message = "Currency must consist of three uppercase letters")
