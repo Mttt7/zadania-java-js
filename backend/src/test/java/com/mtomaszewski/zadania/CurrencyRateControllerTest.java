@@ -1,6 +1,5 @@
 package com.mtomaszewski.zadania;
 
-
 import com.mtomaszewski.zadania.controller.CurrencyRateController;
 import com.mtomaszewski.zadania.dto.Currency.CurrencyRequestDto;
 import com.mtomaszewski.zadania.dto.Currency.CurrencyResponseDto;
@@ -35,7 +34,7 @@ public class CurrencyRateControllerTest {
     void getCurrentCurrencyValueCommandTest() throws Exception {
         CurrencyResponseDto responseDto = CurrencyResponseDto
                 .builder()
-                .value(4.294)
+                .value(4.2954)
                 .build();
 
         given(currencyRateService.getCurrentValueCommand(new CurrencyRequestDto("EUR", "Jan Nowak"))).willReturn(responseDto);
