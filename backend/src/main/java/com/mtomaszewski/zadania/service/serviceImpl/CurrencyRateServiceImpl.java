@@ -21,7 +21,7 @@ public class CurrencyRateServiceImpl implements CurrencyRateService {
         Double rate = nbpCurrencyClientApi.getCurrencyRate(currencyRequest.getCurrency());
         requestService.saveRequestToDb(currencyRequest, rate);
 
-        return CurrencyMapper.mapToCurrencyResponseDto(currencyRequest.getName(),rate);
+        return CurrencyMapper.mapToCurrencyResponseDto(rate);
     }
 
 

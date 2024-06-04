@@ -9,10 +9,9 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class CurrencyMapper {
 
-    public static CurrencyResponseDto mapToCurrencyResponseDto(String name, Double rate){
+    public static CurrencyResponseDto mapToCurrencyResponseDto( Double rate){
         return CurrencyResponseDto
                 .builder()
-                .name(name)
                 .value(rate)
                 .build();
     }

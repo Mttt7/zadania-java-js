@@ -7,5 +7,5 @@ import lombok.Data;
 @Builder
 public class CurrencyResponseDto {
     Double value;
-    String name;
+
 }
