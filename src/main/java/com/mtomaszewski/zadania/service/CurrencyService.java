@@ -1,10 +1,8 @@
 package com.mtomaszewski.zadania.service;
 
-import com.mtomaszewski.zadania.dto.Currency.CurrencyRequestDto;
-import com.mtomaszewski.zadania.dto.Currency.CurrencyResponseDto;
-
-import java.util.List;
+import com.mtomaszewski.zadania.model.Currency;
 
 public interface CurrencyService {
-    CurrencyResponseDto getCurrentValueCommand(CurrencyRequestDto currencyRequest);
+
+    Currency getCurrencyByCode(String code);
 }
