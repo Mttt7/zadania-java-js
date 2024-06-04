@@ -3,7 +3,9 @@ package com.mtomaszewski.zadania.controller;
 
 import com.mtomaszewski.zadania.dto.Currency.CurrencyRequestDto;
 import com.mtomaszewski.zadania.dto.Currency.CurrencyResponseDto;
-import com.mtomaszewski.zadania.service.CurrencyService;
+import com.mtomaszewski.zadania.dto.Request.RequestResponseDto;
+import com.mtomaszewski.zadania.service.CurrencyRateService;
+import com.mtomaszewski.zadania.service.RequestService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,13 +17,20 @@ import java.util.List;
 @RequestMapping("/currencies")
 @RequiredArgsConstructor
 @CrossOrigin("*")
-public class CurrencyController {
+public class CurrencyRateController {
 
-    private final CurrencyService currencyService;
+    private final CurrencyRateService currencyRateService;
+    private final RequestService requestService;
 
     @PostMapping("/get-current-currency-value-command")
     public ResponseEntity<CurrencyResponseDto> getCurrentCurrencyValueCommand(@RequestBody CurrencyRequestDto currencyRequest){
-        CurrencyResponseDto res = currencyService.getCurrentValueCommand(currencyRequest);
+        CurrencyResponseDto res = currencyRateService.getCurrentValueCommand(currencyRequest);
+        return ResponseEntity.status(HttpStatus.OK).body(res);
+    }
+
+    @GetMapping("/requests")
+    public ResponseEntity<List<RequestResponseDto>> getAllRequests(){
+       List<RequestResponseDto> res = requestService.getAllRequests();
         return ResponseEntity.status(HttpStatus.OK).body(res);
     }
 }

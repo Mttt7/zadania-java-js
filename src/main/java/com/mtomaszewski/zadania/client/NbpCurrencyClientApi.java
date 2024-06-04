@@ -22,7 +22,7 @@ public class NbpCurrencyClientApi {
                 }
             }
         }
-        throw new CurrencyNotFound("Currency of code:"+currencyCode+ " not found!");
+        throw new CurrencyNotFound("Currency of code: '"+currencyCode+ "' not found!");
     }
 
 
