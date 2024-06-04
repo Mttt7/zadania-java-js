@@ -3,6 +3,7 @@ import { CurrencyValueRequest } from '../models/currencyValueRequest';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { CurrencyValueResponse } from '../models/currencyValueResponse';
+import { HistoryResponse } from '../models/historyResponse';
 
 @Injectable({
   providedIn: 'root',
@@ -19,5 +20,9 @@ export class CurrencyService {
       this.apiUrl + '/get-current-currency-value-command',
       request
     );
+  }
+
+  getHistory(): Observable<HistoryResponse> {
+    return this.httpClient.get<HistoryResponse>(this.apiUrl + '/requests');
   }
 }
