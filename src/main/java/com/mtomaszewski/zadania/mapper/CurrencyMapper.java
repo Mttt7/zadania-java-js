@@ -16,4 +16,6 @@ public class CurrencyMapper {
                 .value(rate)
                 .build();
     }
+
+
 }
