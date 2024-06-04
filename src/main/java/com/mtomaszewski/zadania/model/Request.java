@@ -2,6 +2,7 @@ package com.mtomaszewski.zadania.model;
 
 
 import jakarta.persistence.*;
+import lombok.Builder;
 import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
 
@@ -16,6 +17,9 @@ public class Request {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
+
+    @Column(name = "rate")
+    private Double rate;
 
     @ManyToOne
     @JoinColumn(name = "user_id")
